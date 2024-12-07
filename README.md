@@ -1,130 +1,83 @@
-# CKA (Certified Kubernetes Administrator) 자격증 문제풀이
+# CKA 학습 자료 및 도구
 
-이 저장소는 CKA 자격증을 준비하는 과정에서 문제풀이를 챕터별로 정리한 자료입니다. 각 섹션은 Kubernetes의 주요 주제를 다루며, 실습 및 문제풀이를 포함하고 있습니다.
-
----
-
-## 목차
-1. [클러스터 아키텍처 및 설치 (Cluster Architecture, Installation, and Configuration)](1_클러스터_아키텍처_및_설치.md)  
-2. [네트워크 (Networking)](2_네트워크.md)  
-3. [워크로드 및 스케줄링 (Workloads and Scheduling)](3_워크로드_및_스케줄링.md)  
-4. [스토리지 (Storage)](4_스토리지.md)  
-5. [클러스터 유지관리 (Cluster Maintenance)](5_클러스터_유지관리.md)  
-6. [보안 (Security)](6_보안.md)  
-7. [로깅 및 모니터링 (Logging and Monitoring)](7_로깅_및_모니터링.md)  
-8. [문제 해결 (Troubleshooting)](8_문제_해결.md)  
-
----
-
-## 1. 클러스터 아키텍처 및 설치 (Cluster Architecture, Installation, and Configuration)
-- **주요 주제**
-  - Control Plane 구성 요소 이해
-  - etcd 설정 및 구성
-  - kubeadm을 사용한 클러스터 설치
-
-- **실습**
-  - Control Plane 장애 조치 시뮬레이션
-  - etcd 백업 및 복원
-
-[🔗 상세 내용 보기](./chapter1/README.md)
+## 📚 학습 자료
+1. **공식 문서**
+   - [Kubernetes Documentation](https://kubernetes.io/docs/)
+   - [CKA Curriculum](https://github.com/cncf/curriculum)
+2. **유튜브 강의**
+   - [TechWorld with Nana - Kubernetes for Beginners](https://www.youtube.com/c/TechWorldwithNana)
+   - [FreeCodeCamp - Kubernetes Full Course](https://www.youtube.com/watch?v=X48VuDVv0do)
+3. **온라인 강의**
+   - [Udemy - Certified Kubernetes Administrator (CKA)](https://www.udemy.com/course/certified-kubernetes-administrator/)
+   - [KodeKloud CKA Course](https://kodekloud.com/courses/)
+4. **연습 플랫폼**
+   - [Killer.sh](https://killer.sh/)
+   - [Katacoda Labs](https://www.katacoda.com/courses/kubernetes)
+   - [Play with Kubernetes](https://labs.play-with-k8s.com/)
 
 ---
 
-## 2. 네트워크 (Networking)
-- **주요 주제**
-  - CNI 플러그인 이해
-  - 서비스 네트워크 및 Pod-to-Pod 통신
-
-- **실습**
-  - NetworkPolicy 작성 및 테스트
-  - 서비스 디버깅
-
-[🔗 상세 내용 보기](./chapter2/README.md)
-
----
-
-## 3. 워크로드 및 스케줄링 (Workloads and Scheduling)
-- **주요 주제**
-  - Deployment 및 ReplicaSet 구성
-  - Node 및 Pod Affinity 설정
-
-- **실습**
-  - CronJob 작성 및 관리
-  - Deployment 롤링 업데이트 수행
-
-[🔗 상세 내용 보기](./chapter3/README.md)
+## 🛠️ 필수 도구
+1. **로컬 환경 설정**
+   - Docker: [설치 가이드](https://docs.docker.com/get-docker/)
+   - Minikube: [설치 가이드](https://minikube.sigs.k8s.io/docs/start/)
+   - Kind (Kubernetes in Docker): [설치 가이드](https://kind.sigs.k8s.io/docs/user/quick-start/)
+2. **CLI 도구**
+   - `kubectl`: [설치 가이드](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+   - `kubeadm`: [설치 가이드](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
+   - `etcdctl`: [설치 가이드](https://etcd.io/docs/)
+   - `helm`: [설치 가이드](https://helm.sh/docs/intro/install/)
+3. **추가 도구**
+   - Lens: [설치 가이드](https://k8slens.dev/)
+   - Prometheus & Grafana: [설치 가이드](https://prometheus.io/docs/introduction/overview/)
+   - cAdvisor: [설치 가이드](https://github.com/google/cadvisor)
 
 ---
 
-## 4. 스토리지 (Storage)
-- **주요 주제**
-  - PersistentVolume 및 PersistentVolumeClaim 설정
-  - StorageClass 이해
-
-- **실습**
-  - PVC를 사용하는 Pod 생성
-  - 동적 프로비저닝 테스트
-
-[🔗 상세 내용 보기](./chapter4/README.md)
-
----
-
-## 5. 클러스터 유지관리 (Cluster Maintenance)
-- **주요 주제**
-  - 클러스터 업그레이드
-  - 노드 유지관리 모드(Maintenance Mode)
-
-- **실습**
-  - kubeadm을 사용한 업그레이드 시뮬레이션
-  - 노드 드레인 및 복구
-
-[🔗 상세 내용 보기](./chapter5/README.md)
+## 📝 학습 팁
+- **시험 준비**
+  - `kubectl` 명령어 사용법에 익숙해지세요.
+  - YAML 파일 작성과 수정 속도를 높이기 위해 연습하세요.
+  - 네임스페이스와 컨텍스트를 효율적으로 관리하는 법을 익히세요 (`kubectl config use-context`).
+- **핵심 영역 학습**
+  - Cluster Architecture, Installation & Configuration
+  - Workloads & Scheduling
+  - Services & Networking
+  - Storage
+  - Troubleshooting
+- [Mock Exam](https://killer.sh/)을 통해 실제 시험 환경에 익숙해지세요.
 
 ---
 
-## 6. 보안 (Security)
-- **주요 주제**
-  - RBAC 구성 및 관리
-  - Pod Security Policy 이해
-
-- **실습**
-  - 사용자 정의 Role 및 RoleBinding 생성
-  - Pod Security Context 설정
-
-[🔗 상세 내용 보기](./chapter6/README.md)
+## 📑 CKA 관련 GitHub 리소스
+1. [CKA Study Guide](https://github.com/dgkanatsios/CKA-Exercises)
+2. [Kubernetes Examples](https://github.com/kubernetes/examples)
+3. [Kubernetes the Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
 
 ---
 
-## 7. 로깅 및 모니터링 (Logging and Monitoring)
-- **주요 주제**
-  - 로그 수집 및 분석
-  - Prometheus 및 Grafana를 사용한 모니터링
-
-- **실습**
-  - kubectl logs 명령어로 Pod 디버깅
-  - Prometheus 경고 규칙 구성
-
-[🔗 상세 내용 보기](./chapter7/README.md)
+## 📅 학습 플랜
+| 주차  | 학습 목표                                      | 비고                         |
+|-------|-----------------------------------------------|------------------------------|
+| 1주차 | Cluster Architecture, Installation 학습       | Kubernetes 클러스터 설치      |
+| 2주차 | Workloads & Scheduling 학습                  | Deployments, CronJobs        |
+| 3주차 | Services & Networking 학습                   | 네트워크 폴리시, Ingress 설정 |
+| 4주차 | Storage 학습                                  | Persistent Volumes, CSI 사용 |
+| 5주차 | Mock Exam 및 Troubleshooting 연습            |                              |
 
 ---
 
-## 8. 문제 해결 (Troubleshooting)
-- **주요 주제**
-  - 컨테이너 및 Pod 문제 해결
-  - 클러스터 구성 문제 식별 및 해결
-
-- **실습**
-  - Pod CrashLoopBackOff 디버깅
-  - 클러스터 DNS 문제 해결
-
-[🔗 상세 내용 보기](./chapter8/README.md)
+## 📌 참고 링크
+- [Kubernetes Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+- [Awesome Kubernetes](https://github.com/ramitsurana/awesome-kubernetes)
+- [CNCF Kubernetes Training](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/)
 
 ---
 
-## 기여 방법
-이 자료는 지속적으로 업데이트됩니다. 기여를 원하시는 분은 PR(Pull Request)을 보내주세요!
+## 💬 문의 및 토론
+- CKA 관련 질문은 [Kubernetes Slack Channel](https://slack.k8s.io/)에서 나눠보세요.
+- 추가 자료 요청이나 문의 사항은 GitHub Issue를 통해 남겨주세요.
 
 ---
 
-## 라이선스
-이 프로젝트는 MIT 라이선스에 따라 배포됩니다. [LICENSE](./LICENSE) 파일을 참조하세요.
+### 작성자: **[Your Name]**
